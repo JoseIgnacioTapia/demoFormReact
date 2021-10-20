@@ -10,15 +10,6 @@ const SimpleInput = props => {
     reset: resetNameInput,
   } = useInput(value => value.trim() !== '');
 
-  const {
-    value: enteredEmail,
-    isValid: enteredEmailIsValid,
-    hasError: emailInputHasError,
-    valueChangeHandler: emailChangeHandler,
-    inputBlurHandler: emailBlurHandler,
-    reset: resetEmailInput,
-  } = useInput(value => value.includes('@'));
-
   let formIsValid = false;
 
   if (enteredNameIsValid & enteredEmailIsValid) {
